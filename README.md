@@ -24,7 +24,12 @@
     - update the board value for the given index
     - use emoji keyboard ctrl + command + space
     - set state with updated value
-- As a user, if I select the winning square the question mark will become a treasure emoji and if I select the losing square the question mark will become a bomb emoji.
+- As a user, if I select the winning square the question mark will become a treasure emoji and if I select the losing square the question mark will become a bomb emoji. (done)
+    - branch: win-lose
+    - create a function using componentDidMount(). This lifecycle method will execute the function once the App component has been initialized.
+    - the function will generate a random location for the treasure by generating an index. Then setState to update.
+    - add a conditional to the handleGamePlay method to update the treasure location with a diamond emoji.
+    - follow similar flow to create bomb location.
 - As a user, I can click on a “Play Again” button that will restart the game.
 - As a user, I can see a counter that shows how many guesses I have left. The counter starts at 5 and decrements one every time I click on a square that is not the treasure nor the bomb.
 - As a user, I can see a message informing me that I won the game if I select the square that contains the treasure.
