@@ -9,15 +9,25 @@ class App extends Component {
       board: ["?", "?", "?", "?", "?", "?", "?", "?", "?"]
     }
   }
+  
+  handleGamePlay = (index) => {
+    alert(index)
+  }
 
   render() {
     return(
       <>
         <h1>Treasure Hunt Game</h1>
           <div className="game-board">
-          {this.state.board.map((value, index)=> {
+           {this.state.board.map((value, index)=> {
             return (
-              <Square value={value} key={index}/>
+              <Square 
+              value={value}
+              // key is an important keyword and shouldn't be used for this.props in child component
+              key={index}
+              index={index}
+              handleGamePlay={this.handleGamePlay}
+              />
             )
           })}
           </div>
